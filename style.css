@@ -1,0 +1,230 @@
+/* Formating Element for the entirety of the web-page */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: .9;
+    text-align: center;
+}
+
+main {
+    margin-top: 70px;
+}
+
+/* header styling */
+
+header {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding-left: 10px;
+    border-bottom: 1px solid seashell;
+}
+
+header img {
+    height: 50px;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    width: 100%;
+    list-style: none;
+}
+
+ul li {
+    min-width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+li a {
+    color: seashell;
+}
+
+/* Section style formated */
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+/* Mission Section styling */
+
+#mission {
+    background-image: url(img/img-mission-background.jpg);
+    max-width: 1200px;
+    height: 700px;
+    margin-bottom: 100px;
+}
+
+.mission__bandeau {
+    background-color: black;
+}
+
+.mission__bandeau h2, .mission__bandeau h4 {
+    padding: 10px 0;
+}
+
+/* Featured Section styling */
+
+#featured {
+    max-width: 1000px;
+}
+
+.featured__title {
+    margin-bottom: 20px;
+}
+
+.product--article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product img {
+    width: 300px;
+    height: 200px;
+}
+
+.product h4 {
+    padding-top: 10px;
+}
+
+/* Locations Section styling */
+
+#locations {
+    max-width: 1200px;
+    height: 500px;
+    background: url(img/img-locations-background.jpg) center;
+    margin-top: 75px;
+}
+
+#locations h2 {
+    padding-bottom: 15px;
+}
+
+.locations-article--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.locations-article--container article {
+    width: 300px;
+    min-height: 300px;
+    background-color: black;
+    opacity: 1;
+}
+
+.locations-article--container article h3, .locations-article--container article p {
+    padding: 20px;
+}
+
+/* Contact Section styling */
+
+#contact {
+    height: 200px;
+    justify-content: space-around;
+}
+
+/* Footer */ 
+
+footer {
+    padding-left: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Responsivity */
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        margin-top: 110px;
+    }
+
+    /* Header responsivity */
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+        height: 110px;
+    }
+
+    header img {
+        margin-top: 20px;
+    }
+
+    header ul {
+        font-size: 20px;
+        justify-content: center;
+    }
+
+    ul li {
+        min-width: 100px;
+    }
+
+    /* Locations responsivity */
+
+    #locations {
+        height: 950px;
+        background-size: cover;
+    }
+
+    .locations-article--container {
+        flex-direction: column;
+    }
+
+    .locations-article--container article {
+        width: 300px;
+        min-height: auto;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #mission {
+        height: 500px;
+        background-size: cover;
+    }
+}
+
+/* Good responsibility until 375px. Less than that, it becomes a bit cluncky */
+
+@media (max-width: 374px) {
+    #mission {
+        height: 400px;
+    }
+
+    ul li{
+        font-size: 16px;
+    }
+
+    .locations-article--container article {
+        width: 250px;
+        min-height: auto;
+    }
+}
